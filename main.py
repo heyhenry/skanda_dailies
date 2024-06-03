@@ -135,3 +135,7 @@ ranmaru_daily = tk.Checkbutton(content, text="Ranmaru", variable=is_checked, com
 julieta_daily = tk.Checkbutton(content, text="Julieta", variable=is_checked, command=daily_julieta).grid(row=17, column=0)
 
 window.mainloop()
+
+# To do next time: 
+# when checking a box, all boxes get checked, so might change to 1 function that has if statements or something that triggers money_accum update
+# based on different daily variables for each boss in lieu of is_checked variable currently used for all of them
