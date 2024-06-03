@@ -14,81 +14,97 @@ def daily_balrog():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_zakum():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_magnus():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_hilla():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_omnicln():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_papulatus():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_pierre():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_vonbon():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_crimsonqueen():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_vellum():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_vonleon():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_horntail():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_arkarium():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_pinkbean():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_ranmaru():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 def daily_julieta():
     global money_accum
     if is_checked.get() == 1:
         money_accum += 1
+        bal.set(money_accum)
 
 # general bal
 
