@@ -9,10 +9,85 @@ money_accum = 0
 is_checked = tk.IntVar()
 
 # dailies functions
-def daily_zakum():
+def daily_balrog():
     global money_accum
     if is_checked.get() == 1:
-        money_accum += 100
+        money_accum += 1
+
+def daily_balrog():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_magnus():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_hilla():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_omnicln():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_papulatus():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_pierre():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_vonbon():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_crimsonqueen():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_vellum():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_vonleon():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_horntail():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_arkarium():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_pinkbean():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_ranmaru():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
+
+def daily_julieta():
+    global money_accum
+    if is_checked.get() == 1:
+        money_accum += 1
 
 player_name_lbl = tk.Label(content, text="Player Name: ExampleHero", padx=10, pady=5).grid(row=0, column=0)
 
