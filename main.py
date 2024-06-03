@@ -6,11 +6,11 @@ window.title("Skanda Dailies")
 content = tk.Frame(window).grid(row=0, column=0)
 
 money_accum = 0
-bal = tk.IntVar()
+is_checked = tk.IntVar()
 
 def add_ursus():
     global money_accum
-    if bal.get() == 1:
+    if is_checked.get() == 1:
         money_accum += 99000000
     
 
@@ -19,7 +19,6 @@ def total_calc():
 
 def check_bal():
     print(money_accum)
-    # print(bal.get())
 
 player_name_lbl = tk.Label(content, text="Player Name: GreatHero", padx=10, pady=5).grid(row=0, column=0, columnspan=2)
 
@@ -33,13 +32,7 @@ esfera_cb = tk.Checkbutton(content, text="Esfera", offvalue=0, onvalue=1).grid(r
 
 money_lbl = tk.Label(content, text="Daily Type: Money Dailies", padx=10, pady=5).grid(row=1, column=1)
 
-
-##
-ursus_cb = tk.Checkbutton(content, text="Ursus", variable=bal, command=add_ursus).grid(row=2, column=1)
-##
-
-
-
+ursus_cb = tk.Checkbutton(content, text="Ursus", variable=is_checked, command=add_ursus).grid(row=2, column=1)
 mt_cb = tk.Checkbutton(content, text="Maple Tour", offvalue=0, onvalue=1).grid(row=3, column=1)
 
 bal_check = tk.Button(content, text='Check Bal', command=check_bal).grid(row=0, column=2)
