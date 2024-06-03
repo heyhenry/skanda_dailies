@@ -3,12 +3,13 @@ import tkinter as tk
 window = tk.Tk()
 window.title("Skandailies")
 
-content = tk.Frame(window).grid(row=0, column=0)
-
+# variables
 money_accum = 0
 is_checked = tk.IntVar()
+bal = tk.StringVar(value=0)
 
-# dailies functions
+# functions
+# daily bosses
 def daily_balrog():
     global money_accum
     if is_checked.get() == 1:
@@ -89,7 +90,15 @@ def daily_julieta():
     if is_checked.get() == 1:
         money_accum += 1
 
+# general bal
+
+
+# content
+content = tk.Frame(window).grid(row=0, column=0)
+
 player_name_lbl = tk.Label(content, text="Player Name: ExampleHero", padx=10, pady=5).grid(row=0, column=0)
+bal_lbl = tk.Label(content, text="Balance: ").grid(row=0, column=1)
+bal_display_lbl = tk.Label(content, textvariable=bal, padx=10).grid(row=0, column=2)
 
 boss_dailies = tk.Label(content, text="Boss Dailies: ", padx=10, pady=5).grid(row=1, column=0)
 balrog_daily = tk.Checkbutton(content, text="Balrog", variable=is_checked, command=daily_balrog).grid(row=2, column=0)
