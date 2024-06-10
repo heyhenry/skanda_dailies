@@ -28,7 +28,7 @@ Brainstorming:
         - variable required
         - label required
         - entry required
-- Real-Time Display Section
+- Real-Time Display Section (On Pause / Currently Redundant)
     - Display character name
         - labels required
     - Display character Class
