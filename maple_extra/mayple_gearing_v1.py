@@ -1,3 +1,5 @@
+# note: code was useful in learning what I wanted, but will now be shelved as the initial version. 
+
 import tkinter as tk
 from tkinter import ttk
 
@@ -47,8 +49,8 @@ counter_lbllbl.grid(row=2, column=0)
 counter_lbl.grid(row=2, column=1)
 sub_btn.grid(row=3, columnspan=2)
 
+# frame 2 content
 test_lbl = tk.Label(frame2, textvariable=current_char)
 test_lbl.pack()
-
 
 root.mainloop()
