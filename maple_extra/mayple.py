@@ -19,7 +19,21 @@ def update_counter():
     counter += 1
     completed_counter.set(counter)
 
+# notebook (tab system) setup
+notebook = ttk.Notebook(root)
+notebook.pack(expand=True, fill='both')
 
+cdt_frame = tk.Frame(notebook, bg='lightblue')
+clt_frame = tk.Frame(notebook, bg='lightgreen')
+sat_frame = tk.Frame(notebook, bg='lightyellow')
+
+cdt_frame.pack()
+clt_frame.pack()
+sat_frame.pack()
+
+notebook.add(cdt_frame, text='CDT')
+notebook.add(clt_frame, text='CLT')
+notebook.add(sat_frame, text='SAT')
 
 # cdt_frame (character details tab)
 
