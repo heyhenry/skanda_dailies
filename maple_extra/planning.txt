@@ -1,0 +1,53 @@
+A quick daily tracker for the currently ending Mayple Event specifically tracking maple leaves for mule gearing.
+- This program will be used for a 2 day recording stint (the last 2 days of the event)
+
+Brainstorming:
+
+1. Having a dedicated tab to enter character details -> Calling it the Character Details Tab (CDT for short)
+2. Having a dedicated tab to receive all the different characters that get submitted from the character details tab -> Calling it the Character List Tab (CLT for short)
+3. Having a dedicated tab to statistics for analytical reasons -> Calling it the Statistical Analysis Tab (SAT for short)
+    3.1 How many characters have been completed? (Gotten the required maple leaves for the day)
+    3.2 A saved state of character progress that spans more than a da
+        3.2.1 text file storage utilised?
+4. Compartmentalising for a design layout for better visualisation and user readability
+
+
+
+
+1. [CDT] Features
+- Input Section
+    - Enter Character's Name Input Box
+        - variable required
+        - label required
+        - entry required
+    - Enter Character's Class Input Box
+        - variable required
+        - label required
+        - entry required
+    - Enter Character's Level Input Box
+        - variable required
+        - label required
+        - entry required
+- Real-Time Display Section
+    - Display character name
+        - labels required
+    - Display character Class
+        - labels required
+    - Display character level
+- Submission Button
+    - Function that will take in all the information and push it to the CLT tab
+
+
+2. [CLT] Features
+- Checklist that contains all the information of each inputted character 
+    - LabelFrame to group up each character's information
+    - Labels for each information of a character
+- Function that activates if a checkbutton is ticked
+    - Sends boolean that updates the character completed counter
+
+3. [SAT] Features
+- Character Completed counter
+    - Receives prompt to update counter from the CLT tab
+- Updates a list of completed characters
+    - Label required?
+- TBD
