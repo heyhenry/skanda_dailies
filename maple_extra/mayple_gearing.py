@@ -26,6 +26,16 @@ def display_name():
     curr_name = char_name.get()
     current_char.set(curr_name)
 
+name_lbl = tk.Label(frame1, text="Enter Character Name: ")
+name_entry = tk.Entry(frame1, textvariable=char_name)
+sub_btn = tk.Button(frame1, text="Submit")
+
+name_lbl.pack()
+name_entry.pack()
+sub_btn.pack()
+
+test_lbl = tk.Label(frame2, text="TEST TEXT")
+test_lbl.pack()
 
 
 root.mainloop()
