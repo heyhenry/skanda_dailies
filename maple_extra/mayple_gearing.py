@@ -17,4 +17,15 @@ frame2.pack()
 notebook.add(frame1, text='Tab 1')
 notebook.add(frame2, text='Tab 2')
 
+# frame 1 (character information input / counter)
+completed_counter = tk.IntVar()
+char_name = tk.StringVar()
+current_char = tk.StringVar()
+
+def display_name():
+    curr_name = char_name.get()
+    current_char.set(curr_name)
+
+
+
 root.mainloop()
