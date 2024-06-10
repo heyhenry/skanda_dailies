@@ -6,9 +6,14 @@ root = tk.Tk()
 root.title('Mayple Helper')
 root.geometry('400x300')
 
-# functions
-
 # variables
+char_name = tk.StringVar()
+char_class = tk.StringVar()
+char_level = tk.StringVar()
+completed_counter = tk.IntVar()
+counter = 0
+
+# functions
 
 # cdt_frame (character details tab)
 
