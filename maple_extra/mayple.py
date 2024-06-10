@@ -14,6 +14,12 @@ completed_counter = tk.IntVar()
 counter = 0
 
 # functions
+def update_counter():
+    global counter 
+    counter += 1
+    completed_counter.set(counter)
+
+
 
 # cdt_frame (character details tab)
 
