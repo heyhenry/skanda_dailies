@@ -25,16 +25,17 @@ current_char = tk.StringVar()
 def display_name():
     curr_name = char_name.get()
     current_char.set(curr_name)
+    char_name.set('')
 
 name_lbl = tk.Label(frame1, text="Enter Character Name: ")
 name_entry = tk.Entry(frame1, textvariable=char_name, justify='center')
 sub_btn = tk.Button(frame1, text="Submit", command=lambda: display_name())
 displayname_lbl = tk.Label(frame1, textvariable=current_char) 
 
-name_lbl.grid(row=0, column=0, sticky='n')
-name_entry.grid(row=0, column=1, sticky='n')
-sub_btn.grid(row=1, column=0, sticky='n')
-displayname_lbl.grid(row=2, column=0, sticky='n')
+name_lbl.grid(row=0, column=0)
+name_entry.grid(row=0, column=1)
+sub_btn.grid(row=1, column=0)
+displayname_lbl.grid(row=2, column=0)
 
 test_lbl = tk.Label(frame2, text="TEST TEXT")
 test_lbl.pack()
