@@ -26,7 +26,11 @@ def custom_json_serializer(obj):
         }
     return obj
 
-json_data = json.dumps(chars_dict, default=custom_json_serializer, indent=4)
+# json_data = json.dumps(chars_dict, default=custom_json_serializer, indent=4)
 
-with open('sample.json', 'w') as outfile:
-    outfile.write(json_data)
+def save_data():
+    json_data = json.dumps(chars_dict, default=custom_json_serializer, indent=4)
+    with open('sample.json', 'w') as outfile:
+        outfile.write(json_data)
+
+save_data()

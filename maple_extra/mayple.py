@@ -28,6 +28,13 @@ def save_characters():
     with open(storage_filename, 'w') as outfile:
         outfile.write(json_data)
 
+def load_characters():
+    with open(storage_filename, 'r') as file:
+        data = json.load(file)
+        characters = []
+        for char_data in data:
+            character = Character
+
 
 # window setup
 root = tk.Tk()
