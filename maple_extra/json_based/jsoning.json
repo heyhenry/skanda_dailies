@@ -1,17 +1,22 @@
 {
-    "Marc": {
-        "char_name": "Marc",
-        "char_race": "Human",
-        "char_level": "25"
+    "Moana": {
+        "char_name": "Moana",
+        "char_race": "Mermaid",
+        "char_level": "102"
     },
-    "Henry": {
-        "char_name": "Henry",
-        "char_race": "Human",
-        "char_level": "25"
+    "Rascal": {
+        "char_name": "Rascal",
+        "char_race": "Jackal",
+        "char_level": "92"
     },
-    "Omo": {
-        "char_name": "Omo",
-        "char_race": "Human",
-        "char_level": "24"
+    "fucker": {
+        "char_name": "fucker",
+        "char_race": "sddholrq",
+        "char_level": "dfg23452"
+    },
+    "Burrbank": {
+        "char_name": "Burrbank",
+        "char_race": "Bull",
+        "char_level": "231"
     }
 }
