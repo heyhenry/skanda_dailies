@@ -1,17 +1,17 @@
 {
-    "Henry": [
-        "Henry",
-        "Mage",
-        21
-    ],
-    "Jeo": [
-        "Jeo",
-        "Warrior",
-        22
-    ],
-    "Mas": [
-        "Mas",
-        "knight",
-        22
-    ]
+    "Henry": {
+        "name": "Henry",
+        "role": "Mage",
+        "level": 21
+    },
+    "Jeo": {
+        "name": "Jeo",
+        "role": "Warrior",
+        "level": 22
+    },
+    "Mas": {
+        "name": "Mas",
+        "role": "knight",
+        "level": 22
+    }
 }
