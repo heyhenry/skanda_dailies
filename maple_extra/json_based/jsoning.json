@@ -1,7 +1,17 @@
 {
-    "wafsd": {
-        "char_name": "wafsd",
-        "char_race": "asdf",
-        "char_level": "sdfavel"
+    "Marc": {
+        "char_name": "Marc",
+        "char_race": "Human",
+        "char_level": "25"
+    },
+    "Henry": {
+        "char_name": "Henry",
+        "char_race": "Human",
+        "char_level": "25"
+    },
+    "Omo": {
+        "char_name": "Omo",
+        "char_race": "Human",
+        "char_level": "24"
     }
 }
