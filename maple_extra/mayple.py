@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 import json
 
+storage_filename = 'mayplesave.json'
+
 class CharInfo:
     def __init__(self, name, char_class, level):
         self.name = name
@@ -20,12 +22,21 @@ def custom_json_serializer(obj):
         }
     return obj
 
+def save_characters():
+    json_data = json.dumps(characters, default=custom_json_serializer, indent=4)
+
+    with open(storage_filename, 'w') as outfile:
+        outfile.write(json_data)
+
+
 # window setup
 root = tk.Tk()
 root.title('Mayple Helper')
 root.geometry('400x300')
 
 # variables
+characters = {}
+
 completed_counter = tk.IntVar()
 counter = 0
 
@@ -40,7 +51,8 @@ def submit_charinfo():
     char_class = charclass_entry.get()
     char_level = charlevel_entry.get()
 
-    char_obj = CharInfo(char_name, char_class, char_level)
+    characters[char_name] = CharInfo(char_name, char_class, char_level)
+    save_characters()
 
 # notebook (tab system) setup
 notebook = ttk.Notebook(root)
