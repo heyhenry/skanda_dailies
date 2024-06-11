@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import json
 
 class CharInfo:
     def __init__(self, name, char_class, level):
