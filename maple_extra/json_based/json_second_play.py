@@ -43,6 +43,13 @@ def save_characters():
     with open(json_filename, 'w') as outfile:
         outfile.write(json_data)
 
+def load_characters():
+    with open(json_filename, 'r') as file:
+        char_data = json.load(file)
+        for char_name, char_info in char_data.items():
+            characters[char_name] = CharInfo(char_name, char_info['char_race'], char_info['char_level'])
+    print(characters)
+
 # print/display character details
 # pulls information from the characters dictionary
 def print_characters():
@@ -61,11 +68,13 @@ level_entry.insert(0, 'Enter Level')
 
 sub_btn = tk.Button(text='Submit', command=save_characters)
 print_btn = tk.Button(text='Print', command=print_characters)
+load_btn = tk.Button(text='Load Data', command=load_characters)
 
 name_entry.pack()
 race_entry.pack()
 level_entry.pack()
 sub_btn.pack()
 print_btn.pack()
+load_btn.pack()
 
 root.mainloop()
