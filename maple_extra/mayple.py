@@ -11,6 +11,15 @@ class CharInfo:
     def print_info(self):
         print(f"Character Name: {self.name}\nCharacter Class: {self.char_class}\nCharacter Level: {self.level}")
 
+def custom_json_serializer(obj):
+    if isinstance(obj, CharInfo):
+        return {
+            'char_name': obj.name,
+            'char_class': obj.char_class,
+            'char_level': obj.level
+        }
+    return obj
+
 # window setup
 root = tk.Tk()
 root.title('Mayple Helper')
@@ -51,7 +60,6 @@ notebook.add(clt_frame, text='CLT')
 notebook.add(sat_frame, text='SAT')
 
 # cdt_frame (character details tab)
-
 cdt_lbl = tk.Label(cdt_frame, text="Character Details")
 charname_lbl = tk.Label(cdt_frame, text='Enter Character Name: ')
 charname_entry = tk.Entry(cdt_frame)
