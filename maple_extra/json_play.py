@@ -15,9 +15,12 @@ chars.append(obj1)
 chars.append(obj2)
 chars.append(obj3)
 
-for i in chars:
-    print("========")
-    print(i.name)
-    print(i.role)
-    print(i.level)
-    print("========")
+chars_dict = {}
+
+for player in chars:
+    chars_dict[player.name] = [player.name, player.role, player.level]
+
+json_data = json.dumps(chars_dict, indent=4)
+
+with open('sample.json', 'w') as outfile:
+    outfile.write(json_data)
