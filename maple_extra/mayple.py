@@ -36,8 +36,26 @@ notebook.add(clt_frame, text='CLT')
 notebook.add(sat_frame, text='SAT')
 
 # cdt_frame (character details tab)
+char_name = tk.StringVar()
+char_class = tk.StringVar()
+char_level = tk.StringVar()
+
+charname_lbl = tk.Label(cdt_frame, text='Enter Character Name: ')
+charname_entry = tk.Entry(cdt_frame, textvariable=char_name)
+charclass_lbl = tk.Label(cdt_frame, text='Enter Character Class: ')
+charclass_entry = tk.Entry(cdt_frame, textvariable=char_class)
+charlevel_lbl = tk.Label(cdt_frame, text='Enter Character Level: ')
+charlevel_entry = tk.Entry(cdt_frame, textvariable=char_level)
+
+charname_lbl.grid(row=0, column=0)
+charname_entry.grid(row=0, column=1)
+charclass_lbl.grid(row=1, column=0)
+charclass_entry.grid(row=1, column=1)
+charlevel_lbl.grid(row=2, column=0)
+charlevel_entry.grid(row=2, column=1)
 
 # clt_frame (character list tab)
+
 
 # sat_frame (satistical analysis tab)
 
