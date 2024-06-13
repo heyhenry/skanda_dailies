@@ -1,8 +1,8 @@
+import json
 import tkinter as tk
 from tkinter import ttk
-import json
 
-storage_filename = 'mayplesave.json'
+storage_filename = 'mayplesave_json'
 
 class CharInfo:
     def __init__(self, name, char_class, level):
@@ -10,63 +10,15 @@ class CharInfo:
         self.char_class = char_class
         self.level = level
 
-    def print_info(self):
-        print(f"Character Name: {self.name}\nCharacter Class: {self.char_class}\nCharacter Level: {self.level}")
-
-def custom_json_serializer(obj):
-    if isinstance(obj, CharInfo):
-        return {
-            'char_name': obj.name,
-            'char_class': obj.char_class,
-            'char_level': obj.level
-        }
-    return obj
-
-def save_characters():
-    json_data = json.dumps(characters, default=custom_json_serializer, indent=4)
-
-    with open(storage_filename, 'w') as outfile:
-        outfile.write(json_data)
-
-def load_characters():
-    with open(storage_filename, 'r') as file:
-        data = json.load(file)
-        characters = []
-        for char_data in data:
-            character = Character
-
-
-# window setup
 root = tk.Tk()
-root.title('Mayple Helper')
-root.geometry('400x300')
+root.title("Mayple Gearing")
+root.geometry("300x300")
 
-# variables
-characters = {}
-
-completed_counter = tk.IntVar()
-counter = 0
-
-# functions
-def update_counter():
-    global counter 
-    counter += 1
-    completed_counter.set(counter)
-
-def submit_charinfo():
-    char_name = charname_entry.get()
-    char_class = charclass_entry.get()
-    char_level = charlevel_entry.get()
-
-    characters[char_name] = CharInfo(char_name, char_class, char_level)
-    save_characters()
-
-# notebook (tab system) setup
+# creating tab system
 notebook = ttk.Notebook(root)
 notebook.pack(expand=True, fill='both')
 
 cdt_frame = tk.Frame(notebook, bg='lightblue')
-
 clt_frame = tk.Frame(notebook, bg='lightgreen')
 sat_frame = tk.Frame(notebook, bg='lightyellow')
 
@@ -74,33 +26,34 @@ cdt_frame.pack()
 clt_frame.pack()
 sat_frame.pack()
 
-notebook.add(cdt_frame, text='CDT')
-notebook.add(clt_frame, text='CLT')
-notebook.add(sat_frame, text='SAT')
+notebook.add(cdt_frame, text='Character Details')
+notebook.add(clt_frame, text='Check List')
+notebook.add(sat_frame, text='Statistic Analysis')
 
-# cdt_frame (character details tab)
-cdt_lbl = tk.Label(cdt_frame, text="Character Details")
-charname_lbl = tk.Label(cdt_frame, text='Enter Character Name: ')
-charname_entry = tk.Entry(cdt_frame)
-charclass_lbl = tk.Label(cdt_frame, text='Enter Character Class: ')
-charclass_entry = tk.Entry(cdt_frame)
-charlevel_lbl = tk.Label(cdt_frame, text='Enter Character Level: ')
-charlevel_entry = tk.Entry(cdt_frame)
-charsub_btn = tk.Button(cdt_frame, text='Submit Character', command=submit_charinfo)
+# character details tab
+cdt_lbl = tk.Label(cdt_frame, text='Character Details', bg='lightblue')
+
+name_lbl = tk.Label(cdt_frame, text='Enter Name:', bg='lightblue')
+name_entry = tk.Entry(cdt_frame)
+
+class_lbl = tk.Label(cdt_frame, text='Enter Class:', bg='lightblue')
+class_entry = tk.Entry(cdt_frame)
+
+level_lbl = tk.Label(cdt_frame, text='Enter Character Level:', bg='lightblue')
+level_entry = tk.Entry(cdt_frame)
+
+charsub_btn = tk.Button(cdt_frame, text='Submit Character')
 
 cdt_lbl.grid(row=0, column=0, columnspan=2)
-charname_lbl.grid(row=1, column=0)
-charname_entry.grid(row=1, column=1)
-charclass_lbl.grid(row=2, column=0)
-charclass_entry.grid(row=2, column=1)
-charlevel_lbl.grid(row=3, column=0)
-charlevel_entry.grid(row=3, column=1)
-charsub_btn.grid(row=4, column=0, columnspan=2)
-
-# clt_frame (character list tab)
+name_lbl.grid(row=1, column=0)
+name_entry.grid(row=1, column=1)
+class_lbl.grid(row=2, column=0)
+class_entry.grid(row=2, column=1)
+level_lbl.grid(row=3, column=0)
+level_entry.grid(row=3, column=1)
+charsub_btn.grid(row=4, column=0, columnspan=2, pady=10)
 
 
-# sat_frame (satistical analysis tab)
 
 
 root.mainloop()

@@ -13,5 +13,10 @@
         "char_name": "Burrbank",
         "char_race": "Bull",
         "char_level": "231"
+    },
+    "Yakuzas": {
+        "char_name": "Yakuzas",
+        "char_race": "Warrior",
+        "char_level": "201"
     }
 }
