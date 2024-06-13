@@ -5,10 +5,6 @@ from tkinter import ttk
 
 storage_filename = 'mayplesave.json'
 characters = {}
-# file_exists = os.path.exists(storage_filename)
-# if not file_exists:
-#     with open(storage_filename, 'w') as file:
-#         pass
 
 class CharInfo:
     def __init__(self, name, char_class, level):
