@@ -93,7 +93,4 @@ level_lbl.grid(row=3, column=0)
 level_entry.grid(row=3, column=1)
 charsub_btn.grid(row=4, column=0, columnspan=2, pady=10)
 
-
-
-
 root.mainloop()
