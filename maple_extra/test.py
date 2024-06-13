@@ -47,8 +47,30 @@
 # obj = test('Henry', 2)
 # obj.print_details()
 
-import os
-filename = 'water.json'
+# import os
+# filename = 'water.json'
 
-check_file = os.path.isfile(filename)
-print(check_file)
+# check_file = os.path.isfile(filename)
+# print(check_file)
+
+import tkinter as tk
+
+root = tk.Tk()
+root.title('w/e')
+root.geometry('300x300')
+
+lb = tk.Listbox(root, selectmode='single')
+
+lb.insert(1, 'Apple')
+lb.insert(2, 'Banana')
+lb.insert(3, 'Orange')
+
+def selected_item():
+    print(lb.curselection())
+
+btn = tk.Button(root,text='Print Selected', command=selected_item)
+
+btn.pack(side='bottom')
+lb.pack()
+
+root.mainloop()
