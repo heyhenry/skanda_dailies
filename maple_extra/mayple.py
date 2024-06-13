@@ -5,7 +5,6 @@ from tkinter import ttk
 
 storage_filename = 'mayplesave.json'
 characters = {}
-
 # file_exists = os.path.exists(storage_filename)
 # if not file_exists:
 #     with open(storage_filename, 'w') as file:
@@ -27,7 +26,7 @@ def json_serializer(obj):
     return obj
 
 def save_characters():
-    
+
     load_characters()
 
     char_name = name_entry.get()
@@ -49,6 +48,17 @@ def load_characters():
             char_data = json.load(file)
             for char_name, char_info in char_data.items():
                 characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
+
+def populate_checklist():
+    # with open(storage_filename, 'r') as file:
+    #     char_data = json.load(file)
+    #     for char_name, char_info in char_data.items():
+    #         characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
+
+    load_characters()
+    
+    for char_name in characters:
+        char_lb.insert('end', char_name)
 
 root = tk.Tk()
 root.title("Mayple Gearing")
@@ -92,5 +102,15 @@ class_entry.grid(row=2, column=1)
 level_lbl.grid(row=3, column=0)
 level_entry.grid(row=3, column=1)
 charsub_btn.grid(row=4, column=0, columnspan=2, pady=10)
+
+# character check list tab
+clt_lbl = tk.Label(clt_frame, text='Character Check List', bg='lightgreen')
+clt_lbl.pack()
+char_lb = tk.Listbox(clt_frame)
+char_lb.pack(fill='both', expand=True)
+populate_checklist()
+
+
+
 
 root.mainloop()

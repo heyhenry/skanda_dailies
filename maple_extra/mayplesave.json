@@ -13,5 +13,10 @@
         "char_name": "Zunc",
         "char_class": "Warrior",
         "char_level": "283"
+    },
+    "water": {
+        "char_name": "water",
+        "char_class": "asdfasdf",
+        "char_level": "asdf"
     }
 }
