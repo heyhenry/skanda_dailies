@@ -23,27 +23,32 @@
 # root.mainloop()
 
 
-class test:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class test:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def get_name(self):
-        return self.name
+#     def get_name(self):
+#         return self.name
     
-    def get_age(self):
-        return self.age
+#     def get_age(self):
+#         return self.age
     
-    def set_name(self, x):
-        self.name = x
+#     def set_name(self, x):
+#         self.name = x
 
-    def set_age(self, x):
-        self.age = x
+#     def set_age(self, x):
+#         self.age = x
 
-    def print_details(self):
-        print(self.name)
-        print(self.age)
+#     def print_details(self):
+#         print(self.name)
+#         print(self.age)
 
-obj = test('Henry', 2)
-obj.print_details()
+# obj = test('Henry', 2)
+# obj.print_details()
 
+import os
+filename = 'water.json'
+
+check_file = os.path.isfile(filename)
+print(check_file)

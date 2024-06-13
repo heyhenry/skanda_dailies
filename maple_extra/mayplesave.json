@@ -1,0 +1,17 @@
+{
+    "Yuka": {
+        "char_name": "Yuka",
+        "char_class": "Knight",
+        "char_level": "192"
+    },
+    "Kaew": {
+        "char_name": "Kaew",
+        "char_class": "Night Walker",
+        "char_level": "283"
+    },
+    "Zunc": {
+        "char_name": "Zunc",
+        "char_class": "Warrior",
+        "char_level": "283"
+    }
+}
