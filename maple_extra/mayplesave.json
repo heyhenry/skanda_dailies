@@ -18,5 +18,25 @@
         "char_name": "water",
         "char_class": "asdfasdf",
         "char_level": "asdf"
+    },
+    "Nampa": {
+        "char_name": "Nampa",
+        "char_class": "Waterman",
+        "char_level": "920"
+    },
+    "Unc": {
+        "char_name": "Unc",
+        "char_class": "Comedian",
+        "char_level": "55"
+    },
+    "Waka": {
+        "char_name": "Waka",
+        "char_class": "Kiri",
+        "char_level": "999"
+    },
+    "Zoot": {
+        "char_name": "Zoot",
+        "char_class": "Keny",
+        "char_level": "929"
     }
 }

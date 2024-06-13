@@ -26,6 +26,9 @@ def json_serializer(obj):
 # save new characters to save file
 def save_characters():
 
+    # clear the list box
+    char_lb.delete(0, 'end')
+
     # load all character data from existing save file
     load_characters()
 
@@ -44,6 +47,8 @@ def save_characters():
     with open(storage_filename, 'w') as outfile:
         outfile.write(json_data)
 
+    populate_checklist()
+
 # load all character data from save file
 def load_characters():
 
@@ -57,7 +62,7 @@ def load_characters():
             for char_name, char_info in char_data.items():
                 characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
-# insert all character names into check list (listbox)
+# # insert all character names into check list (listbox)
 def populate_checklist():
 
     # load all existing character data from save file
