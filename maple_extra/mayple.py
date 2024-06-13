@@ -50,10 +50,6 @@ def load_characters():
                 characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
 def populate_checklist():
-    # with open(storage_filename, 'r') as file:
-    #     char_data = json.load(file)
-    #     for char_name, char_info in char_data.items():
-    #         characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
     load_characters()
     
