@@ -72,6 +72,10 @@ def populate_checklist():
     for char_name in characters:
         char_lb.insert('end', char_name)
 
+def get_selected_character():
+    # return char_lb.get(char_lb.curselection())
+    print(char_lb.get(char_lb.curselection()))
+
 # initial window setup
 root = tk.Tk()
 root.title("Mayple Gearing")
@@ -118,9 +122,13 @@ charsub_btn.grid(row=4, column=0, columnspan=2, pady=10)
 
 # character check list tab
 clt_lbl = tk.Label(clt_frame, text='Character Check List', bg='lightgreen')
-clt_lbl.pack()
 char_lb = tk.Listbox(clt_frame)
-char_lb.pack(fill='both', expand=True)
+charselect_btn = tk.Button(clt_frame, text='Select Character', command=get_selected_character)
 populate_checklist()
+
+
+clt_lbl.pack()
+char_lb.pack(fill='both', expand=True)
+charselect_btn.pack()
 
 root.mainloop()
