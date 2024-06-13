@@ -26,34 +26,44 @@ def json_serializer(obj):
 # save new characters to save file
 def save_characters():
 
+    # load all character data from existing save file
     load_characters()
 
+    # retrieve input data from entry widgets
     char_name = name_entry.get()
     char_class = class_entry.get()
     char_level = level_entry.get()
 
+    # turn input data into structured dictionary and initialize character objects
     characters[char_name] = CharInfo(char_name, char_class, char_level)
 
+    # transform dictionary data into json file data
     json_data = json.dumps(characters, default=json_serializer, indent=4)
 
+    # write the transformed json file data to save file
     with open(storage_filename, 'w') as outfile:
         outfile.write(json_data)
 
 # load all character data from save file
 def load_characters():
 
+    # checks to see if save file exists
     if os.path.exists(storage_filename): 
 
+        # reads the save file, retrieves the character data
         with open(storage_filename, 'r') as file:
             char_data = json.load(file)
+            # stores character data accordingly into a dictionary
             for char_name, char_info in char_data.items():
                 characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
 # insert all character names into check list (listbox)
 def populate_checklist():
 
+    # load all existing character data from save file
     load_characters()
     
+    # insert each char obj's name into listbox
     for char_name in characters:
         char_lb.insert('end', char_name)
 
