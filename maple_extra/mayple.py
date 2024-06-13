@@ -6,12 +6,14 @@ from tkinter import ttk
 storage_filename = 'mayplesave.json'
 characters = {}
 
+# character object 
 class CharInfo:
     def __init__(self, name, char_class, level):
         self.name = name
         self.char_class = char_class
         self.level = level
 
+# custom json serializer
 def json_serializer(obj):
     if isinstance(obj, CharInfo):
         return {
@@ -21,6 +23,7 @@ def json_serializer(obj):
         }
     return obj
 
+# save new characters to save file
 def save_characters():
 
     load_characters()
@@ -36,6 +39,7 @@ def save_characters():
     with open(storage_filename, 'w') as outfile:
         outfile.write(json_data)
 
+# load all character data from save file
 def load_characters():
 
     if os.path.exists(storage_filename): 
@@ -45,6 +49,7 @@ def load_characters():
             for char_name, char_info in char_data.items():
                 characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
+# insert all character names into check list (listbox)
 def populate_checklist():
 
     load_characters()
@@ -52,6 +57,7 @@ def populate_checklist():
     for char_name in characters:
         char_lb.insert('end', char_name)
 
+# initial window setup
 root = tk.Tk()
 root.title("Mayple Gearing")
 root.geometry("300x300")
@@ -101,8 +107,5 @@ clt_lbl.pack()
 char_lb = tk.Listbox(clt_frame)
 char_lb.pack(fill='both', expand=True)
 populate_checklist()
-
-
-
 
 root.mainloop()
