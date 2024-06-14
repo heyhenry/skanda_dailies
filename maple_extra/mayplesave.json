@@ -1,42 +1,20 @@
 {
-    "Yuka": {
-        "char_name": "Yuka",
-        "char_class": "Knight",
-        "char_level": "192"
-    },
-    "Kaew": {
-        "char_name": "Kaew",
-        "char_class": "Night Walker",
-        "char_level": "283"
-    },
-    "Zunc": {
-        "char_name": "Zunc",
+    "Zena": {
+        "char_name": "Zena",
         "char_class": "Warrior",
-        "char_level": "283"
+        "char_level": "291",
+        "char_capped": false
     },
-    "water": {
-        "char_name": "water",
-        "char_class": "asdfasdf",
-        "char_level": "asdf"
+    "Walu": {
+        "char_name": "Walu",
+        "char_class": "Mage",
+        "char_level": "199",
+        "char_capped": false
     },
-    "Nampa": {
-        "char_name": "Nampa",
-        "char_class": "Waterman",
-        "char_level": "920"
-    },
-    "Unc": {
-        "char_name": "Unc",
-        "char_class": "Comedian",
-        "char_level": "55"
-    },
-    "Waka": {
-        "char_name": "Waka",
-        "char_class": "Kiri",
-        "char_level": "999"
-    },
-    "Zoot": {
-        "char_name": "Zoot",
-        "char_class": "Keny",
-        "char_level": "929"
+    "Juju": {
+        "char_name": "Juju",
+        "char_class": "Archer",
+        "char_level": "172",
+        "char_capped": false
     }
 }

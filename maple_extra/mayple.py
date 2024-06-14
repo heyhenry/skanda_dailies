@@ -8,10 +8,11 @@ characters = {}
 
 # character object 
 class CharInfo:
-    def __init__(self, name, char_class, level):
+    def __init__(self, name, char_class, level, capped):
         self.name = name
         self.char_class = char_class
         self.level = level
+        self.capped = capped
 
 # custom json serializer
 def json_serializer(obj):
@@ -19,7 +20,8 @@ def json_serializer(obj):
         return {
             'char_name': obj.name,
             'char_class': obj.char_class,
-            'char_level': obj.level
+            'char_level': obj.level,
+            'char_capped': obj.capped
         }
     return obj
 
@@ -36,9 +38,9 @@ def save_characters():
     char_name = name_entry.get()
     char_class = class_entry.get()
     char_level = level_entry.get()
-
+    char_capped = False
     # turn input data into structured dictionary and initialize character objects
-    characters[char_name] = CharInfo(char_name, char_class, char_level)
+    characters[char_name] = CharInfo(char_name, char_class, char_level, char_capped)
 
     # transform dictionary data into json file data
     json_data = json.dumps(characters, default=json_serializer, indent=4)
@@ -60,7 +62,7 @@ def load_characters():
             char_data = json.load(file)
             # stores character data accordingly into a dictionary
             for char_name, char_info in char_data.items():
-                characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
+                characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'], char_info['char_capped'])
 
 # # insert all character names into check list (listbox)
 def populate_checklist():
@@ -125,7 +127,6 @@ clt_lbl = tk.Label(clt_frame, text='Character Check List', bg='lightgreen')
 char_lb = tk.Listbox(clt_frame)
 charselect_btn = tk.Button(clt_frame, text='Select Character', command=get_selected_character)
 populate_checklist()
-
 
 clt_lbl.pack()
 char_lb.pack(fill='both', expand=True)
