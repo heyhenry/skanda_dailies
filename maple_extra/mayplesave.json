@@ -1,20 +1,26 @@
 {
-    "Zena": {
-        "char_name": "Zena",
-        "char_class": "Warrior",
+    "Pokemon": {
+        "char_name": "Pokemon",
+        "char_class": "Charmander",
         "char_level": "291",
         "char_capped": false
     },
-    "Walu": {
-        "char_name": "Walu",
-        "char_class": "Mage",
-        "char_level": "199",
+    "Utrk": {
+        "char_name": "Utrk",
+        "char_class": "Bear",
+        "char_level": "192",
         "char_capped": false
     },
-    "Juju": {
-        "char_name": "Juju",
-        "char_class": "Archer",
-        "char_level": "172",
+    "Yuka": {
+        "char_name": "Yuka",
+        "char_class": "Fish",
+        "char_level": "992",
+        "char_capped": false
+    },
+    "Yuya": {
+        "char_name": "Yuya",
+        "char_class": "Snail",
+        "char_level": "991",
         "char_capped": false
     }
 }

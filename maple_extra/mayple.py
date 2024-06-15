@@ -14,6 +14,9 @@ class CharInfo:
         self.level = level
         self.capped = capped
 
+    def __str__(self):
+        return self.name
+
 # custom json serializer
 def json_serializer(obj):
     if isinstance(obj, CharInfo):
@@ -75,8 +78,11 @@ def populate_checklist():
         char_lb.insert('end', char_name)
 
 def get_selected_character():
-    # return char_lb.get(char_lb.curselection())
-    print(char_lb.get(char_lb.curselection()))
+    global characters
+    # print(char_lb.get(char_lb.curselection()))
+    # print(characters[char_lb.get(char_lb.curselection())])
+    # print(characters[char_lb.get(char_lb.curselection())])
+    print(characters[char_lb.get(char_lb.curselection())])
 
 # initial window setup
 root = tk.Tk()
