@@ -3,6 +3,6 @@
         "char_name": "poopy",
         "char_class": "toilet",
         "char_level": "888",
-        "char_capped": true
+        "char_capped": false
     }
 }

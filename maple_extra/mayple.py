@@ -91,8 +91,10 @@ def boss_capped():
     with open(storage_filename, 'r+') as file:
         data = json.load(file)
 
-    if key in data:
+    if key in data and data[key]['char_capped'] is False:
         data[key]['char_capped'] = True
+    elif key in data and data[key]['char_capped'] is True:
+        data[key]['char_capped'] = False
 
     with open(storage_filename, 'w') as file:
         json.dump(data, file, indent=4)
