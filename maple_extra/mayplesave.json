@@ -1,26 +1,8 @@
 {
-    "Pokemon": {
-        "char_name": "Pokemon",
-        "char_class": "Charmander",
-        "char_level": "291",
-        "char_capped": false
-    },
-    "Utrk": {
-        "char_name": "Utrk",
-        "char_class": "Bear",
-        "char_level": "192",
-        "char_capped": false
-    },
-    "Yuka": {
-        "char_name": "Yuka",
-        "char_class": "Fish",
-        "char_level": "992",
-        "char_capped": false
-    },
-    "Yuya": {
-        "char_name": "Yuya",
-        "char_class": "Snail",
-        "char_level": "991",
-        "char_capped": false
+    "poopy": {
+        "char_name": "poopy",
+        "char_class": "toilet",
+        "char_level": "888",
+        "char_capped": true
     }
 }

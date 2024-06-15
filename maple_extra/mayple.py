@@ -77,12 +77,25 @@ def populate_checklist():
     for char_name in characters:
         char_lb.insert('end', char_name)
 
+# ========== TODO ========== #
+# add variables that can be pulled and placed into labels etc for analysis/statics and also maybe clt
+
+# retrieves information about selected character via their name
 def get_selected_character():
-    global characters
-    # print(char_lb.get(char_lb.curselection()))
-    # print(characters[char_lb.get(char_lb.curselection())])
-    # print(characters[char_lb.get(char_lb.curselection())])
     print(characters[char_lb.get(char_lb.curselection())])
+
+def boss_capped():
+    
+    key = char_lb.get(char_lb.curselection())
+
+    with open(storage_filename, 'r+') as file:
+        data = json.load(file)
+
+    if key in data:
+        data[key]['char_capped'] = True
+
+    with open(storage_filename, 'w') as file:
+        json.dump(data, file, indent=4)
 
 # initial window setup
 root = tk.Tk()
@@ -131,7 +144,7 @@ charsub_btn.grid(row=4, column=0, columnspan=2, pady=10)
 # character check list tab
 clt_lbl = tk.Label(clt_frame, text='Character Check List', bg='lightgreen')
 char_lb = tk.Listbox(clt_frame)
-charselect_btn = tk.Button(clt_frame, text='Select Character', command=get_selected_character)
+charselect_btn = tk.Button(clt_frame, text='Select Character', command=boss_capped)
 populate_checklist()
 
 clt_lbl.pack()
