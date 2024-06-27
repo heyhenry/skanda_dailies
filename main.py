@@ -33,6 +33,8 @@ def json_serializer(obj):
 
 def save_character():
 
+    load_characters()
+
     char_name = charadd_name.get()
     char_class = charadd_class.get()
     char_level = charadd_level.get()
@@ -43,6 +45,14 @@ def save_character():
 
     with open(storage_filename, 'w') as outfile:
         outfile.write(json_data)
+
+def load_characters():
+
+    if os.path.exists(storage_filename):
+        with open(storage_filename, 'r') as file:
+            char_data = json.load(file)
+            for char_name, char_info in char_data.items():
+                characters[char_name] = CharInfo(char_name, char_info['char_class'], char_info['char_level'])
 
 root = tk.Tk()
 root.title('Skanda')
