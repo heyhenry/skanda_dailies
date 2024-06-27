@@ -75,7 +75,14 @@ notebook.add(checklist_frame, text='Bossing')
 
 # home frame
 home_title = tk.Label(home_frame, text='Skanda | Home')
-home_title.pack()
+charlst_lbl = tk.Label(home_frame, text='Character List:')
+charlst_lb = tk.Listbox(home_frame)
+charlst_btn = tk.Button(home_frame, text='Select Character')
+
+home_title.grid(row=0, column=0)
+charlst_lbl.grid(row=1, column=0)
+charlst_lb.grid(row=2, column=0)
+charlst_btn.grid(row=3, column=0)
 
 # char add frame
 charadd_title = tk.Label(charadd_frame, text='Skanda | Add Character')
