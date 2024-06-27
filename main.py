@@ -3,7 +3,17 @@ import json
 import os
 from tkinter import ttk
 
+characters = {}
+storage_filename = 'skanda.save'
 
+class CharInfo:
+    def __init__(self, char_name, char_class, char_level):
+        self.char_name = char_name
+        self.char_class = char_class
+        self.char_level = char_level
+
+    # def __str__(self):
+        # return self.char_name
 
 def print_details():
     char_name = charadd_name.get()
@@ -12,6 +22,27 @@ def print_details():
 
     print(f"Name: {char_name} | Class: {char_class} | Level: {char_level}")
 
+def json_serializer(obj):
+    if isinstance(obj, CharInfo):
+        return {
+            'char_name': obj.char_name,
+            'char_class': obj.char_class,
+            'char_level': obj.char_level
+        }
+    return obj
+
+def save_character():
+
+    char_name = charadd_name.get()
+    char_class = charadd_class.get()
+    char_level = charadd_level.get()
+
+    characters[char_name] = CharInfo(char_name, char_class, char_level)
+
+    json_data = json.dumps(characters, default=json_serializer, indent=4)
+
+    with open(storage_filename, 'w') as outfile:
+        outfile.write(json_data)
 
 root = tk.Tk()
 root.title('Skanda')
@@ -48,7 +79,7 @@ charadd_class = tk.Entry(charadd_frame)
 charadd_level_lbl = tk.Label(charadd_frame, text='Character Level:')
 charadd_level = tk.Entry(charadd_frame)
 
-charadd_btn = tk.Button(charadd_frame, text='Submit', command=print_details)
+charadd_btn = tk.Button(charadd_frame, text='Submit', command=save_character)
 
 charadd_title.grid(row=0, columnspan=2)
 charadd_name_lbl.grid(row=1, column=0)
